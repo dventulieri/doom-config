@@ -2,19 +2,30 @@
 My Doom Emacs configuration for Rails development.
 
 ## Installation
-1. Install [Doom](https://github.com/hlissner/doom-emacs)
+
+### Install Emacs
+
+Install the dependencies
+``` shell
+# Dependencies
+brew install git ripgrep
+brew install coreutils fd
+xcode-select --install
 
 ```
+
+Install [emacs-plus](https://github.com/d12frosted/homebrew-emacs-plus)
+``` shell
+brew tap d12frosted/emacs-plus
+brew install emacs-plus
+ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications/Emacs.app
+```
+
+
+### Install Doom
+
+``` shell
+git clone https://github.com/danielventulieri/doom-config.git ~/.doom.d
 git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
-```
-
-2. Clone this repo into ~/.doom-custom.d
-```
-git clone https://github.com/danielventulieri/doom-config.git ~/.doom-custom.d
-```
-
-3. Point $XDG_CONFIG_HOME to ~/.doom-custom.d so Doom loads the new config
-```
-export XDG_CONFIG_HOME='~/.doom-custom.d'
 ```
